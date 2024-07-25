@@ -1,0 +1,23 @@
+{
+    "name": "cassi/cassio",
+    "description": "curso de php oo",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/","Config\\": "config/","Helpers\\": "helpers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cassio",
+            "email": "clippersummer87@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "dev-master",
+        "league/plates": "v3.x-dev"
+    }
+}

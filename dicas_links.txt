@@ -1,0 +1,63 @@
+Instalar o PHP 7 no MAC:
+curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
+ou
+curl -s http://php-osx.liip.ch/install.sh | bash -s 7.1
+e depois rodar:
+export PATH=/usr/local/php5/bin:$PATH
+
+
+Instalar o Composer no MAC:
+https://www.youtube.com/watch?v=OCK6vPVJCA4
+
+
+Autoload no Manual do PHP:
+http://php.net/manual/pt_BR/language.oop5.autoload.php
+
+Autoload com PSR-4
+http://www.php-fig.org/psr/psr-4/
+
+Autoload com PSR-4 + Composer
+https://getcomposer.org/doc/01-basic-usage.md#autoloading
+
+
+
+
+
+*** PRIMEIRO PASSO: COMO CRIAR UM PROJETO DO ZERO SEGUIR ESSA SEQUENCIA ***
+composer init (vai fazer algumas perguntas)
+
+Criar na raiz do diretorio um arquivo composer.json esse é o arq de configuracao do composer
+seguindo essa sequencia:
+
+1º [enter]
+2º uma descrição: [curso de php oo] [enter]
+3º author : [escreva o seu nome completo e email] cassio oliveira <clippersummer87@gmail.com>
+4º minimo de estabilidade: [dev]
+5º qual tipo do nosso projeto: [project]
+6º licença: [MIT]
+7º Dependencia de produção: [no]
+8º Dependencia de desenvolvimento: [no]
+9º confirma: [yes]
+criou o composer.json aparecera no menu
+
+*** SEGUNDO PASSO ***
+https://getcomposer.org/doc/01-basic-usage.md#autoloading
+pegar o autoload e colocar no composer.json
+"autoload": {
+        "psr-4": {"Acme\\": "src/"} [salvar]
+composer update 
+colocar no index.php
+require __DIR__ . '/vendor/autoload.php';
+
+*** TERCEIRO PASSO ***
+Criar namespace nos arq que ele ira utilizar no diretorio App
+namespace App;
+colocar no index App\nome da classe
+use App\Util;
+use App\SiteInfo;
+
+*** QUARTO PASSO ***
+composer require slim/slim:"4.*" 
+composer require slim/psr7
+
+
