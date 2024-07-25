@@ -41,7 +41,7 @@ class ComprasController extends Controlle
     }
 
     return $response->withRedirect('/compras');
-    //return $response->redirect('views/compras');
+
 
     
     
